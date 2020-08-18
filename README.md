@@ -15,15 +15,15 @@ The result topic to be subscribed is "tf_baselink_map".
 One example of generating the ground truth pose of the robot is to use the p3d plugin in gazebo. For instance, by adding the following lines in the .gazebo file or urdf file for the robot:
 
 ```xml
-<gazebo>`
-  `<plugin name="ground_truth" filename="libgazebo_ros_p3d.so">`
-    `<robotNamespace>$(arg robot_namespace)</robotNamespace>`
-    `<frameName>map</frameName>`
-    `<bodyName>base_link</bodyName>`
-    `<topicName>pose_ground_truth</topicName>`
-    `<updateRate>60.0</updateRate>`
-  `</plugin>`
-`</gazebo>
+<gazebo>
+  <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
+    <robotNamespace>$(arg robot_namespace)</robotNamespace>
+    <frameName>map</frameName>
+    <bodyName>base_link</bodyName>
+    <topicName>pose_ground_truth</topicName>
+    <updateRate>60.0</updateRate>
+  </plugin>
+</gazebo>
 ```
 
 Then the ground truth message will be published at topic "pose_ground_truth".
