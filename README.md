@@ -14,7 +14,8 @@ The result topic to be subscribed is "tf_baselink_map".
 
 One example of generating the ground truth pose of the robot is to use the p3d plugin in gazebo. For instance, by adding the following lines in the .gazebo file or urdf file for the robot:
 
-`<gazebo>`
+```xml
+<gazebo>`
   `<plugin name="ground_truth" filename="libgazebo_ros_p3d.so">`
     `<robotNamespace>$(arg robot_namespace)</robotNamespace>`
     `<frameName>map</frameName>`
@@ -22,13 +23,14 @@ One example of generating the ground truth pose of the robot is to use the p3d p
     `<topicName>pose_ground_truth</topicName>`
     `<updateRate>60.0</updateRate>`
   `</plugin>`
-`</gazebo>`
+`</gazebo>
+```
 
 Then the ground truth message will be published at topic "pose_ground_truth".
 
 ## Plot xy coordinates of the robot using PlotJuggler
 
-[Plotjuggler CheatSHeet](https://www.plotjuggler.io/cheatsheet)
+[PlotJuggler CheatSHeet](https://www.plotjuggler.io/cheatsheet)
 
 Load in a ros bag or capture stream from PlotJuggler.
 
