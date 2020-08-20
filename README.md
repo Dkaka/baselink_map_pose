@@ -4,11 +4,11 @@ This ROS package generates nav_msgs::Odometry  message of base_link against map 
 
 
 
-It is tested under Melodic and the husky robot/simulator.
+It is tested under Melodic and the husky robot or simulator.
 
-Run using the command rosrun baselink_map_pose pose_base_map
+Run using the command `rosrun baselink_map_pose pose_base_map`
 
-The result topic to be subscribed is "tf_baselink_map".
+The result topic to be subscribed is `tf_baselink_map`.
 
 ### Ground truth pose message from gazebo
 
@@ -26,7 +26,7 @@ One example of generating the ground truth pose of the robot is to use the p3d p
 </gazebo>
 ```
 
-Then the ground truth message will be published at topic "pose_ground_truth".
+Then the ground truth message will be published at topic `pose_ground_truth`.
 
 ## Plot xy coordinates of the robot using PlotJuggler
 
