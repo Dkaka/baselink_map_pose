@@ -33,6 +33,6 @@ Then the ground truth message will be published at topic `pose_ground_truth`.
 
 Load in a ros bag or capture stream from PlotJuggler. Please refer to the  [PlotJuggler-GitHub](https://github.com/facontidavide/PlotJuggler) for installation and basic usage.
 
-Use the right mouse click [PlotJuggler CheatSHeet](https://www.plotjuggler.io/cheatsheet) to load in pose.psosition.x and pose.psosition.y and other ones as shown below:
+Use the right mouse click [PlotJuggler CheatSHeet](https://www.plotjuggler.io/cheatsheet) to load in `pose.psosition.x` and `pose.psosition.y` and other ones as shown below (legends on the top right):
 
 ![2](./image/2.png)
