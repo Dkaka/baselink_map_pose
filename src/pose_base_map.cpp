@@ -32,7 +32,7 @@ int main(int argc, char **argv)
     geometry_msgs::TransformStamped transformStamped;
     try
     {
-      transformStamped = tfBuffer.lookupTransform("map", "base_link",
+      transformStamped = tfBuffer.lookupTransform("world", "Cam_link",
                                                   ros::Time(0));
     }
     catch (tf2::TransformException &ex)
@@ -57,9 +57,9 @@ int main(int argc, char **argv)
 
     ros::Time now = ros::Time::now();
 
-    odom.header.frame_id = "map";
+    odom.header.frame_id = "world";
 
-    odom.child_frame_id = "base_link";
+    odom.child_frame_id = "Cam_link";
     odom.header.stamp.sec = now.sec;
     odom.header.stamp.nsec = now.nsec;
     // odom.pose.orientation.x y z w
